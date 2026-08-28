@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-wood: var(--wood);
+  --color-wood-foreground: var(--wood-foreground);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: dark;
+
+  /* black / gray / ash / dirty-white / white palette */
+  --background: oklch(0.16 0.004 60);
+  --foreground: oklch(0.92 0.006 70);
+
+  --card: oklch(0.2 0.005 60);
+  --card-foreground: oklch(0.92 0.006 70);
+
+  --popover: oklch(0.19 0.005 60);
+  --popover-foreground: oklch(0.92 0.006 70);
+
+  /* dirty white as the primary action color */
+  --primary: oklch(0.9 0.008 80);
+  --primary-foreground: oklch(0.17 0.004 60);
+
+  --secondary: oklch(0.26 0.005 60);
+  --secondary-foreground: oklch(0.88 0.006 70);
+
+  --muted: oklch(0.24 0.005 60);
+  --muted-foreground: oklch(0.64 0.006 70);
+
+  /* warm dark wood accent */
+  --accent: oklch(0.42 0.045 55);
+  --accent-foreground: oklch(0.94 0.006 80);
+
+  --destructive: oklch(0.62 0.2 25);
+
+  --border: oklch(0.32 0.006 60 / 55%);
+  --input: oklch(0.3 0.006 60 / 60%);
+  --ring: oklch(0.55 0.03 60);
+
+  --wood: oklch(0.3 0.035 50);
+  --wood-foreground: oklch(0.9 0.01 80);
+
+  --radius: 0.4rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(0.5 0.01 60 / 6%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.5 0.01 60 / 6%) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .text-glow {
+    text-shadow: 0 0 24px oklch(0.9 0.02 80 / 25%);
+  }
+  .cyber-corners {
+    position: relative;
+  }
+  .cyber-corners::before,
+  .cyber-corners::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: var(--accent-foreground);
+    opacity: 0.5;
+  }
+  .cyber-corners::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .cyber-corners::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+}
