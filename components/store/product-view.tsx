@@ -25,7 +25,7 @@ export function ProductView({ onBuy }: { onBuy: () => void }) {
           <div className="absolute inset-0 bg-grid opacity-40" />
           <Image
             src="/product-device.png"
-            alt="AETHER One ambient AI terminal"
+            alt="KENAI PSYCHE One ambient AI terminal"
             width={460}
             height={460}
             priority
@@ -37,11 +37,11 @@ export function ProductView({ onBuy }: { onBuy: () => void }) {
       {/* Right: details */}
       <div className="flex flex-col justify-center gap-4">
         <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-          SKU · AE-ONE-01 / In stock
+          SKU · KN-PSY-01 / In stock
         </div>
 
         <h2 className="text-balance font-sans text-3xl font-semibold tracking-tight text-foreground xl:text-4xl">
-          AETHER One
+          PSYCHE One
         </h2>
 
         <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">

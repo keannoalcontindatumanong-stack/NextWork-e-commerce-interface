@@ -20,9 +20,9 @@ export function HeroView({ onEnter }: { onEnter: () => void }) {
         </h1>
 
         <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">
-          AETHER One is a desk-bound agent wrapped in dark walnut and brushed
-          ash. It listens, reasons, and acts — quietly, in the corner of the
-          room you actually like being in.
+          PSYCHE One by KENAI is a desk-bound agent wrapped in dark walnut and
+          brushed ash. It listens, reasons, and acts — quietly, in the corner of
+          the room you actually like being in.
         </p>
 
         <div className="mt-2 flex flex-wrap items-center gap-3">
@@ -60,14 +60,14 @@ export function HeroView({ onEnter }: { onEnter: () => void }) {
           <div className="absolute inset-0 bg-grid opacity-40" />
           <Image
             src="/product-device.png"
-            alt="AETHER One ambient AI terminal in dark walnut and brushed ash"
+            alt="KENAI PSYCHE One ambient AI terminal in dark walnut and brushed ash"
             width={420}
             height={420}
             priority
             className="relative z-10 h-auto w-[78%] drop-shadow-[0_25px_60px_rgba(0,0,0,0.6)]"
           />
           <span className="absolute bottom-4 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            AETHER · ONE
+            PSYCHE · ONE
           </span>
         </div>
       </div>

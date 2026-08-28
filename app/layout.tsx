@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'AETHER — Ambient AI Terminal',
+  title: 'KENAI — PSYCHE One',
   description:
-    'A cozy, agentic desktop AI terminal in dark walnut and brushed ash. Buy the AETHER One.',
+    'PSYCHE One by KENAI. A cozy, agentic desktop AI terminal in dark walnut and brushed ash.',
   generator: 'v0.app',
 }
 

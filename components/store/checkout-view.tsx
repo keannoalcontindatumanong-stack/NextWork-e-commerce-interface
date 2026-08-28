@@ -45,11 +45,11 @@ export function CheckoutView() {
           Order confirmed
         </h2>
         <p className="max-w-sm text-pretty text-sm text-muted-foreground">
-          Your AETHER One is being prepared. A tracking link is on its way to
+          Your PSYCHE One is being prepared. A tracking link is on its way to
           your inbox — we&apos;ll keep the lights warm.
         </p>
         <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-          Ref · AE-{Math.random().toString(36).slice(2, 8).toUpperCase()}
+          Ref · KN-{Math.random().toString(36).slice(2, 8).toUpperCase()}
         </div>
       </div>
     )
@@ -121,14 +121,14 @@ export function CheckoutView() {
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border bg-background">
               <Image
                 src="/product-device.png"
-                alt="AETHER One"
+                alt="KENAI PSYCHE One"
                 fill
                 className="object-contain p-1.5"
               />
             </div>
             <div>
               <div className="text-sm font-medium text-foreground">
-                AETHER One
+                PSYCHE One
               </div>
               <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
                 Walnut · Qty 1

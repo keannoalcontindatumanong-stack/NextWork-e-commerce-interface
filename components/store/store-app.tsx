@@ -20,9 +20,17 @@ export function StoreApp() {
   return (
     <main className="relative flex h-dvh flex-col overflow-hidden bg-background">
       {/* ambient background layers */}
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: 'url(/bg-charcoal.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-20" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage: 'url(/wood-texture.png)',
           backgroundSize: 'cover',
@@ -44,10 +52,10 @@ export function StoreApp() {
           className="flex items-center gap-2.5"
         >
           <span className="flex h-6 w-6 items-center justify-center rounded-sm border border-accent-foreground/40 bg-accent/20 font-mono text-[11px] text-accent-foreground">
-            Æ
+            K
           </span>
-          <span className="font-mono text-sm uppercase tracking-[0.3em] text-foreground">
-            Aether
+          <span className="font-mono text-sm uppercase tracking-[0.4em] text-foreground">
+            KENAI
           </span>
         </button>
 
@@ -90,7 +98,7 @@ export function StoreApp() {
 
       {/* Footer status bar */}
       <footer className="relative z-10 flex shrink-0 items-center justify-between border-t border-border px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:px-8">
-        <span>© AETHER Systems</span>
+        <span>© KENAI · PSYCHE One</span>
         <span className="flex items-center gap-2">
           <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent-foreground" />
           secure session
