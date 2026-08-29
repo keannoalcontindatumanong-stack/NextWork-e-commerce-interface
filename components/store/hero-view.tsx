@@ -14,9 +14,7 @@ export function HeroView({ onEnter }: { onEnter: () => void }) {
         </div>
 
         <h1 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-tight text-foreground text-glow sm:text-5xl xl:text-6xl">
-          A calmer way to
-          <br />
-          think with a machine.
+          Welcome to My Store
         </h1>
 
         <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">

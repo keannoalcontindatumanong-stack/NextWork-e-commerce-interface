@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { HeroView } from './hero-view'
 import { ProductView } from './product-view'
 import { CheckoutView } from './checkout-view'
+import { ThemeToggle } from './theme-toggle'
 
 type View = 'home' | 'product' | 'checkout'
 
@@ -21,24 +22,33 @@ export function StoreApp() {
     <main className="relative flex h-dvh flex-col overflow-hidden bg-background">
       {/* ambient background layers */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 dark:opacity-100"
         style={{
           backgroundImage: 'url(/bg-charcoal.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-20" />
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30 dark:opacity-20" />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0 opacity-[0.04] dark:opacity-[0.06]"
         style={{
           backgroundImage: 'url(/wood-texture.png)',
           backgroundSize: 'cover',
           mixBlendMode: 'overlay',
         }}
       />
+      {/* light-mode top glow */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 dark:hidden"
+        style={{
+          background:
+            'radial-gradient(90% 60% at 50% 0%, oklch(1 0 0 / 60%) 0%, transparent 55%)',
+        }}
+      />
+      {/* dark-mode edge vignette */}
+      <div
+        className="pointer-events-none absolute inset-0 hidden dark:block"
         style={{
           background:
             'radial-gradient(80% 60% at 50% 0%, transparent 40%, oklch(0.1 0.004 60 / 70%) 100%)',
@@ -78,8 +88,11 @@ export function StoreApp() {
           ))}
         </nav>
 
-        <div className="hidden font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground md:block">
-          agent · online
+        <div className="flex items-center gap-3">
+          <span className="hidden font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground md:block">
+            agent · online
+          </span>
+          <ThemeToggle />
         </div>
       </header>
 
