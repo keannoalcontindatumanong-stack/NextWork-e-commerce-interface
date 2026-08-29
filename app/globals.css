@@ -36,6 +36,45 @@
 }
 
 :root {
+  color-scheme: light;
+
+  /* light "paper" palette — warm off-white, charcoal ink, wood accent */
+  --background: oklch(0.95 0.004 75);
+  --foreground: oklch(0.24 0.006 60);
+
+  --card: oklch(0.98 0.003 75);
+  --card-foreground: oklch(0.24 0.006 60);
+
+  --popover: oklch(0.98 0.003 75);
+  --popover-foreground: oklch(0.24 0.006 60);
+
+  /* charcoal ink as the primary action color on light */
+  --primary: oklch(0.28 0.006 60);
+  --primary-foreground: oklch(0.96 0.004 75);
+
+  --secondary: oklch(0.9 0.005 70);
+  --secondary-foreground: oklch(0.3 0.006 60);
+
+  --muted: oklch(0.91 0.004 70);
+  --muted-foreground: oklch(0.48 0.006 60);
+
+  /* warm wood accent */
+  --accent: oklch(0.55 0.05 55);
+  --accent-foreground: oklch(0.32 0.05 50);
+
+  --destructive: oklch(0.58 0.2 25);
+
+  --border: oklch(0.4 0.006 60 / 22%);
+  --input: oklch(0.4 0.006 60 / 28%);
+  --ring: oklch(0.45 0.03 60);
+
+  --wood: oklch(0.34 0.04 50);
+  --wood-foreground: oklch(0.94 0.01 80);
+
+  --radius: 0.4rem;
+}
+
+.dark {
   color-scheme: dark;
 
   /* black / gray / ash / dirty-white / white palette */
@@ -70,8 +109,6 @@
 
   --wood: oklch(0.3 0.035 50);
   --wood-foreground: oklch(0.9 0.01 80);
-
-  --radius: 0.4rem;
 }
 
 @layer base {
